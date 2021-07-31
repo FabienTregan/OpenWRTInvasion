@@ -84,7 +84,7 @@ If **after reading above text** you still want to proceed, after login to the ro
 
 ```shell
 cd /tmp
-curl https://raw.githubusercontent.com/acecilia/OpenWRTInvasion/master/firmwares/OpenWrt/06-06-2020/openwrt-ramips-mt7621-xiaomi_mir3g-v2-squashfs-sysupgrade.bin --output firmware.bin # Put here the URL you want to use to download the firmware
+curl -L https://raw.githubusercontent.com/acecilia/OpenWRTInvasion/master/firmwares/OpenWrt/06-06-2020/openwrt-ramips-mt7621-xiaomi_mir3g-v2-squashfs-sysupgrade.bin --output firmware.bin # Put here the URL you want to use to download the firmware
 ./busybox sha256sum firmware.bin # Verify the firmware checksum before flashing, very important to avoid bricking your device!
 mtd -e OS1 -r write firmware.bin OS1 # Install OpenWrt
 ```
